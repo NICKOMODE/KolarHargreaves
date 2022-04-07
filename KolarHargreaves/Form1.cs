@@ -29,12 +29,17 @@ namespace Hudební_umělci
 
         private void cbZanr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbZanr.SelectedIndex = 1;
+            
         }
 
         private void lbVypis_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbZanr.SelectedIndex = 1;
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
