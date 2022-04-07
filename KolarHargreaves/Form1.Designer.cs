@@ -55,6 +55,8 @@
             this.cb_AktivniAno = new System.Windows.Forms.RadioButton();
             this.rb_AktivniNe = new System.Windows.Forms.RadioButton();
             this.cb_nazivuMozna = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbJmeno = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numVek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.lbVypis.FormattingEnabled = true;
             this.lbVypis.Location = new System.Drawing.Point(12, 12);
             this.lbVypis.Name = "lbVypis";
-            this.lbVypis.Size = new System.Drawing.Size(215, 381);
+            this.lbVypis.Size = new System.Drawing.Size(215, 420);
             this.lbVypis.TabIndex = 0;
             this.lbVypis.SelectedIndexChanged += new System.EventHandler(this.lbVypis_SelectedIndexChanged);
             // 
@@ -71,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(243, 12);
+            this.label1.Location = new System.Drawing.Point(294, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 18);
             this.label1.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(243, 51);
+            this.label2.Location = new System.Drawing.Point(294, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 2;
@@ -91,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(243, 88);
+            this.label3.Location = new System.Drawing.Point(294, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 3;
@@ -106,7 +108,7 @@
             "CZ",
             "USA",
             "UK"});
-            this.cbNarodnost.Location = new System.Drawing.Point(326, 13);
+            this.cbNarodnost.Location = new System.Drawing.Point(377, 36);
             this.cbNarodnost.Name = "cbNarodnost";
             this.cbNarodnost.Size = new System.Drawing.Size(202, 21);
             this.cbNarodnost.TabIndex = 4;
@@ -120,7 +122,7 @@
             "Emo rap",
             "Hip Hop",
             "Drill"});
-            this.cbZanr.Location = new System.Drawing.Point(327, 52);
+            this.cbZanr.Location = new System.Drawing.Point(378, 75);
             this.cbZanr.Name = "cbZanr";
             this.cbZanr.Size = new System.Drawing.Size(202, 21);
             this.cbZanr.TabIndex = 5;
@@ -129,7 +131,7 @@
             // cbNazivuAno
             // 
             this.cbNazivuAno.AutoSize = true;
-            this.cbNazivuAno.Location = new System.Drawing.Point(327, 91);
+            this.cbNazivuAno.Location = new System.Drawing.Point(378, 114);
             this.cbNazivuAno.Name = "cbNazivuAno";
             this.cbNazivuAno.Size = new System.Drawing.Size(45, 17);
             this.cbNazivuAno.TabIndex = 6;
@@ -139,7 +141,7 @@
             // cbNazivuNe
             // 
             this.cbNazivuNe.AutoSize = true;
-            this.cbNazivuNe.Location = new System.Drawing.Point(391, 91);
+            this.cbNazivuNe.Location = new System.Drawing.Point(442, 114);
             this.cbNazivuNe.Name = "cbNazivuNe";
             this.cbNazivuNe.Size = new System.Drawing.Size(40, 17);
             this.cbNazivuNe.TabIndex = 7;
@@ -150,7 +152,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(243, 125);
+            this.label4.Location = new System.Drawing.Point(294, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 18);
             this.label4.TabIndex = 8;
@@ -160,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(243, 166);
+            this.label5.Location = new System.Drawing.Point(294, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 18);
             this.label5.TabIndex = 10;
@@ -168,7 +170,7 @@
             // 
             // numVek
             // 
-            this.numVek.Location = new System.Drawing.Point(377, 127);
+            this.numVek.Location = new System.Drawing.Point(428, 150);
             this.numVek.Minimum = new decimal(new int[] {
             5,
             0,
@@ -191,7 +193,7 @@
             "=",
             "<",
             ">"});
-            this.cbVek.Location = new System.Drawing.Point(326, 126);
+            this.cbVek.Location = new System.Drawing.Point(377, 149);
             this.cbVek.Name = "cbVek";
             this.cbVek.Size = new System.Drawing.Size(45, 21);
             this.cbVek.TabIndex = 14;
@@ -200,7 +202,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(243, 199);
+            this.label6.Location = new System.Drawing.Point(294, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 18);
             this.label6.TabIndex = 15;
@@ -210,7 +212,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(243, 236);
+            this.label7.Location = new System.Drawing.Point(294, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 18);
             this.label7.TabIndex = 18;
@@ -219,7 +221,7 @@
             // rbMuzs
             // 
             this.rbMuzs.AutoSize = true;
-            this.rbMuzs.Location = new System.Drawing.Point(328, 238);
+            this.rbMuzs.Location = new System.Drawing.Point(379, 261);
             this.rbMuzs.Name = "rbMuzs";
             this.rbMuzs.Size = new System.Drawing.Size(45, 17);
             this.rbMuzs.TabIndex = 19;
@@ -230,7 +232,7 @@
             // rbZena
             // 
             this.rbZena.AutoSize = true;
-            this.rbZena.Location = new System.Drawing.Point(403, 238);
+            this.rbZena.Location = new System.Drawing.Point(454, 261);
             this.rbZena.Name = "rbZena";
             this.rbZena.Size = new System.Drawing.Size(50, 17);
             this.rbZena.TabIndex = 20;
@@ -240,7 +242,7 @@
             // 
             // btFiltrovats
             // 
-            this.btFiltrovats.Location = new System.Drawing.Point(246, 261);
+            this.btFiltrovats.Location = new System.Drawing.Point(297, 284);
             this.btFiltrovats.Name = "btFiltrovats";
             this.btFiltrovats.Size = new System.Drawing.Size(283, 23);
             this.btFiltrovats.TabIndex = 21;
@@ -249,7 +251,7 @@
             // 
             // btSeradit
             // 
-            this.btSeradit.Location = new System.Drawing.Point(246, 290);
+            this.btSeradit.Location = new System.Drawing.Point(297, 313);
             this.btSeradit.Name = "btSeradit";
             this.btSeradit.Size = new System.Drawing.Size(283, 23);
             this.btSeradit.TabIndex = 22;
@@ -258,7 +260,7 @@
             // 
             // btEditovat
             // 
-            this.btEditovat.Location = new System.Drawing.Point(245, 319);
+            this.btEditovat.Location = new System.Drawing.Point(296, 342);
             this.btEditovat.Name = "btEditovat";
             this.btEditovat.Size = new System.Drawing.Size(283, 23);
             this.btEditovat.TabIndex = 23;
@@ -267,7 +269,7 @@
             // 
             // btPridat
             // 
-            this.btPridat.Location = new System.Drawing.Point(246, 348);
+            this.btPridat.Location = new System.Drawing.Point(297, 371);
             this.btPridat.Name = "btPridat";
             this.btPridat.Size = new System.Drawing.Size(283, 23);
             this.btPridat.TabIndex = 24;
@@ -276,7 +278,7 @@
             // 
             // btZrusit
             // 
-            this.btZrusit.Location = new System.Drawing.Point(12, 406);
+            this.btZrusit.Location = new System.Drawing.Point(11, 435);
             this.btZrusit.Name = "btZrusit";
             this.btZrusit.Size = new System.Drawing.Size(517, 23);
             this.btZrusit.TabIndex = 25;
@@ -285,7 +287,7 @@
             // 
             // btSmazat
             // 
-            this.btSmazat.Location = new System.Drawing.Point(246, 377);
+            this.btSmazat.Location = new System.Drawing.Point(297, 400);
             this.btSmazat.Name = "btSmazat";
             this.btSmazat.Size = new System.Drawing.Size(283, 23);
             this.btSmazat.TabIndex = 26;
@@ -295,7 +297,7 @@
             // cb_zenatyAno
             // 
             this.cb_zenatyAno.AutoSize = true;
-            this.cb_zenatyAno.Location = new System.Drawing.Point(362, 202);
+            this.cb_zenatyAno.Location = new System.Drawing.Point(413, 225);
             this.cb_zenatyAno.Name = "cb_zenatyAno";
             this.cb_zenatyAno.Size = new System.Drawing.Size(44, 17);
             this.cb_zenatyAno.TabIndex = 27;
@@ -306,7 +308,7 @@
             // cb_zenatyNe
             // 
             this.cb_zenatyNe.AutoSize = true;
-            this.cb_zenatyNe.Location = new System.Drawing.Point(440, 202);
+            this.cb_zenatyNe.Location = new System.Drawing.Point(491, 225);
             this.cb_zenatyNe.Name = "cb_zenatyNe";
             this.cb_zenatyNe.Size = new System.Drawing.Size(39, 17);
             this.cb_zenatyNe.TabIndex = 28;
@@ -317,7 +319,7 @@
             // cb_AktivniAno
             // 
             this.cb_AktivniAno.AutoSize = true;
-            this.cb_AktivniAno.Location = new System.Drawing.Point(328, 168);
+            this.cb_AktivniAno.Location = new System.Drawing.Point(379, 191);
             this.cb_AktivniAno.Name = "cb_AktivniAno";
             this.cb_AktivniAno.Size = new System.Drawing.Size(44, 17);
             this.cb_AktivniAno.TabIndex = 29;
@@ -328,7 +330,7 @@
             // rb_AktivniNe
             // 
             this.rb_AktivniNe.AutoSize = true;
-            this.rb_AktivniNe.Location = new System.Drawing.Point(414, 168);
+            this.rb_AktivniNe.Location = new System.Drawing.Point(465, 191);
             this.rb_AktivniNe.Name = "rb_AktivniNe";
             this.rb_AktivniNe.Size = new System.Drawing.Size(39, 17);
             this.rb_AktivniNe.TabIndex = 30;
@@ -339,18 +341,37 @@
             // cb_nazivuMozna
             // 
             this.cb_nazivuMozna.AutoSize = true;
-            this.cb_nazivuMozna.Location = new System.Drawing.Point(457, 91);
+            this.cb_nazivuMozna.Location = new System.Drawing.Point(508, 114);
             this.cb_nazivuMozna.Name = "cb_nazivuMozna";
             this.cb_nazivuMozna.Size = new System.Drawing.Size(58, 17);
             this.cb_nazivuMozna.TabIndex = 31;
             this.cb_nazivuMozna.Text = "Možná";
             this.cb_nazivuMozna.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(243, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 18);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Přezdívka / název :";
+            // 
+            // tbJmeno
+            // 
+            this.tbJmeno.Location = new System.Drawing.Point(377, 10);
+            this.tbJmeno.Name = "tbJmeno";
+            this.tbJmeno.Size = new System.Drawing.Size(243, 20);
+            this.tbJmeno.TabIndex = 33;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 440);
+            this.ClientSize = new System.Drawing.Size(634, 470);
+            this.Controls.Add(this.tbJmeno);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cb_nazivuMozna);
             this.Controls.Add(this.rb_AktivniNe);
             this.Controls.Add(this.cb_AktivniAno);
@@ -416,6 +437,8 @@
         private System.Windows.Forms.RadioButton cb_AktivniAno;
         private System.Windows.Forms.RadioButton rb_AktivniNe;
         private System.Windows.Forms.CheckBox cb_nazivuMozna;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbJmeno;
     }
 }
 
