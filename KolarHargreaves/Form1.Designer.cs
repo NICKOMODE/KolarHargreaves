@@ -34,16 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbNarodnost = new System.Windows.Forms.ComboBox();
             this.cbZanr = new System.Windows.Forms.ComboBox();
-            this.cbNazivuAno = new System.Windows.Forms.CheckBox();
-            this.cbNazivuNe = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.numVek = new System.Windows.Forms.NumericUpDown();
             this.cbVek = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.rbMuzs = new System.Windows.Forms.RadioButton();
-            this.rbZena = new System.Windows.Forms.RadioButton();
             this.btFiltrovats = new System.Windows.Forms.Button();
             this.btSeradit = new System.Windows.Forms.Button();
             this.btEditovat = new System.Windows.Forms.Button();
@@ -52,12 +48,15 @@
             this.btSmazat = new System.Windows.Forms.Button();
             this.cb_zenatyAno = new System.Windows.Forms.RadioButton();
             this.cb_zenatyNe = new System.Windows.Forms.RadioButton();
-            this.cb_AktivniAno = new System.Windows.Forms.RadioButton();
-            this.rb_AktivniNe = new System.Windows.Forms.RadioButton();
-            this.cb_nazivuMozna = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbJmeno = new System.Windows.Forms.TextBox();
+            this.rb_NazivuAno = new System.Windows.Forms.RadioButton();
+            this.rb_NazivuNe = new System.Windows.Forms.RadioButton();
+            this.cb_AktivniNe = new System.Windows.Forms.CheckBox();
+            this.tb_pohlavi = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numVek)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbVypis
@@ -98,7 +97,6 @@
             this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Naživu :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbNarodnost
             // 
@@ -126,27 +124,6 @@
             this.cbZanr.Name = "cbZanr";
             this.cbZanr.Size = new System.Drawing.Size(202, 21);
             this.cbZanr.TabIndex = 5;
-            this.cbZanr.SelectedIndexChanged += new System.EventHandler(this.cbZanr_SelectedIndexChanged);
-            // 
-            // cbNazivuAno
-            // 
-            this.cbNazivuAno.AutoSize = true;
-            this.cbNazivuAno.Location = new System.Drawing.Point(378, 114);
-            this.cbNazivuAno.Name = "cbNazivuAno";
-            this.cbNazivuAno.Size = new System.Drawing.Size(45, 17);
-            this.cbNazivuAno.TabIndex = 6;
-            this.cbNazivuAno.Text = "Ano";
-            this.cbNazivuAno.UseVisualStyleBackColor = true;
-            // 
-            // cbNazivuNe
-            // 
-            this.cbNazivuNe.AutoSize = true;
-            this.cbNazivuNe.Location = new System.Drawing.Point(442, 114);
-            this.cbNazivuNe.Name = "cbNazivuNe";
-            this.cbNazivuNe.Size = new System.Drawing.Size(40, 17);
-            this.cbNazivuNe.TabIndex = 7;
-            this.cbNazivuNe.Text = "Ne";
-            this.cbNazivuNe.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -218,28 +195,6 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Pohlaví :";
             // 
-            // rbMuzs
-            // 
-            this.rbMuzs.AutoSize = true;
-            this.rbMuzs.Location = new System.Drawing.Point(379, 261);
-            this.rbMuzs.Name = "rbMuzs";
-            this.rbMuzs.Size = new System.Drawing.Size(45, 17);
-            this.rbMuzs.TabIndex = 19;
-            this.rbMuzs.TabStop = true;
-            this.rbMuzs.Text = "Muž";
-            this.rbMuzs.UseVisualStyleBackColor = true;
-            // 
-            // rbZena
-            // 
-            this.rbZena.AutoSize = true;
-            this.rbZena.Location = new System.Drawing.Point(454, 261);
-            this.rbZena.Name = "rbZena";
-            this.rbZena.Size = new System.Drawing.Size(50, 17);
-            this.rbZena.TabIndex = 20;
-            this.rbZena.TabStop = true;
-            this.rbZena.Text = "Žena";
-            this.rbZena.UseVisualStyleBackColor = true;
-            // 
             // btFiltrovats
             // 
             this.btFiltrovats.Location = new System.Drawing.Point(297, 284);
@@ -280,7 +235,7 @@
             // 
             this.btZrusit.Location = new System.Drawing.Point(11, 435);
             this.btZrusit.Name = "btZrusit";
-            this.btZrusit.Size = new System.Drawing.Size(517, 23);
+            this.btZrusit.Size = new System.Drawing.Size(568, 23);
             this.btZrusit.TabIndex = 25;
             this.btZrusit.Text = "Zrušit Výběr";
             this.btZrusit.UseVisualStyleBackColor = true;
@@ -316,38 +271,6 @@
             this.cb_zenatyNe.Text = "Ne";
             this.cb_zenatyNe.UseVisualStyleBackColor = true;
             // 
-            // cb_AktivniAno
-            // 
-            this.cb_AktivniAno.AutoSize = true;
-            this.cb_AktivniAno.Location = new System.Drawing.Point(379, 191);
-            this.cb_AktivniAno.Name = "cb_AktivniAno";
-            this.cb_AktivniAno.Size = new System.Drawing.Size(44, 17);
-            this.cb_AktivniAno.TabIndex = 29;
-            this.cb_AktivniAno.TabStop = true;
-            this.cb_AktivniAno.Text = "Ano";
-            this.cb_AktivniAno.UseVisualStyleBackColor = true;
-            // 
-            // rb_AktivniNe
-            // 
-            this.rb_AktivniNe.AutoSize = true;
-            this.rb_AktivniNe.Location = new System.Drawing.Point(465, 191);
-            this.rb_AktivniNe.Name = "rb_AktivniNe";
-            this.rb_AktivniNe.Size = new System.Drawing.Size(39, 17);
-            this.rb_AktivniNe.TabIndex = 30;
-            this.rb_AktivniNe.TabStop = true;
-            this.rb_AktivniNe.Text = "Ne";
-            this.rb_AktivniNe.UseVisualStyleBackColor = true;
-            // 
-            // cb_nazivuMozna
-            // 
-            this.cb_nazivuMozna.AutoSize = true;
-            this.cb_nazivuMozna.Location = new System.Drawing.Point(508, 114);
-            this.cb_nazivuMozna.Name = "cb_nazivuMozna";
-            this.cb_nazivuMozna.Size = new System.Drawing.Size(58, 17);
-            this.cb_nazivuMozna.TabIndex = 31;
-            this.cb_nazivuMozna.Text = "Možná";
-            this.cb_nazivuMozna.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -365,16 +288,65 @@
             this.tbJmeno.Size = new System.Drawing.Size(243, 20);
             this.tbJmeno.TabIndex = 33;
             // 
+            // rb_NazivuAno
+            // 
+            this.rb_NazivuAno.AutoSize = true;
+            this.rb_NazivuAno.Location = new System.Drawing.Point(16, 17);
+            this.rb_NazivuAno.Name = "rb_NazivuAno";
+            this.rb_NazivuAno.Size = new System.Drawing.Size(44, 17);
+            this.rb_NazivuAno.TabIndex = 34;
+            this.rb_NazivuAno.TabStop = true;
+            this.rb_NazivuAno.Text = "Ano";
+            this.rb_NazivuAno.UseVisualStyleBackColor = true;
+            // 
+            // rb_NazivuNe
+            // 
+            this.rb_NazivuNe.AutoSize = true;
+            this.rb_NazivuNe.Location = new System.Drawing.Point(97, 17);
+            this.rb_NazivuNe.Name = "rb_NazivuNe";
+            this.rb_NazivuNe.Size = new System.Drawing.Size(39, 17);
+            this.rb_NazivuNe.TabIndex = 35;
+            this.rb_NazivuNe.TabStop = true;
+            this.rb_NazivuNe.Text = "Ne";
+            this.rb_NazivuNe.UseVisualStyleBackColor = true;
+            // 
+            // cb_AktivniNe
+            // 
+            this.cb_AktivniNe.AutoSize = true;
+            this.cb_AktivniNe.Location = new System.Drawing.Point(377, 192);
+            this.cb_AktivniNe.Name = "cb_AktivniNe";
+            this.cb_AktivniNe.Size = new System.Drawing.Size(45, 17);
+            this.cb_AktivniNe.TabIndex = 36;
+            this.cb_AktivniNe.Text = "Ano";
+            this.cb_AktivniNe.UseVisualStyleBackColor = true;
+            // 
+            // tb_pohlavi
+            // 
+            this.tb_pohlavi.Location = new System.Drawing.Point(413, 260);
+            this.tb_pohlavi.Name = "tb_pohlavi";
+            this.tb_pohlavi.Size = new System.Drawing.Size(100, 20);
+            this.tb_pohlavi.TabIndex = 37;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rb_NazivuAno);
+            this.groupBox1.Controls.Add(this.rb_NazivuNe);
+            this.groupBox1.Location = new System.Drawing.Point(377, 102);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 40);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 470);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tb_pohlavi);
+            this.Controls.Add(this.cb_AktivniNe);
             this.Controls.Add(this.tbJmeno);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cb_nazivuMozna);
-            this.Controls.Add(this.rb_AktivniNe);
-            this.Controls.Add(this.cb_AktivniAno);
             this.Controls.Add(this.cb_zenatyNe);
             this.Controls.Add(this.cb_zenatyAno);
             this.Controls.Add(this.btSmazat);
@@ -383,16 +355,12 @@
             this.Controls.Add(this.btEditovat);
             this.Controls.Add(this.btSeradit);
             this.Controls.Add(this.btFiltrovats);
-            this.Controls.Add(this.rbZena);
-            this.Controls.Add(this.rbMuzs);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbVek);
             this.Controls.Add(this.numVek);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbNazivuNe);
-            this.Controls.Add(this.cbNazivuAno);
             this.Controls.Add(this.cbZanr);
             this.Controls.Add(this.cbNarodnost);
             this.Controls.Add(this.label3);
@@ -403,6 +371,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numVek)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,16 +386,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbNarodnost;
         private System.Windows.Forms.ComboBox cbZanr;
-        private System.Windows.Forms.CheckBox cbNazivuAno;
-        private System.Windows.Forms.CheckBox cbNazivuNe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numVek;
         private System.Windows.Forms.ComboBox cbVek;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton rbMuzs;
-        private System.Windows.Forms.RadioButton rbZena;
         private System.Windows.Forms.Button btFiltrovats;
         private System.Windows.Forms.Button btSeradit;
         private System.Windows.Forms.Button btEditovat;
@@ -434,11 +400,13 @@
         private System.Windows.Forms.Button btSmazat;
         private System.Windows.Forms.RadioButton cb_zenatyAno;
         private System.Windows.Forms.RadioButton cb_zenatyNe;
-        private System.Windows.Forms.RadioButton cb_AktivniAno;
-        private System.Windows.Forms.RadioButton rb_AktivniNe;
-        private System.Windows.Forms.CheckBox cb_nazivuMozna;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbJmeno;
+        private System.Windows.Forms.RadioButton rb_NazivuAno;
+        private System.Windows.Forms.RadioButton rb_NazivuNe;
+        private System.Windows.Forms.CheckBox cb_AktivniNe;
+        private System.Windows.Forms.TextBox tb_pohlavi;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
