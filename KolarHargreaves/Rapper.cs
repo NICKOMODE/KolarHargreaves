@@ -9,17 +9,19 @@ namespace KolarHargreaves
 {
     public class Rapper
     {
+        public int ID { get; set; } 
         public string Prezdivka { get; set; }
-        public string Narodnost { get; set; }
-        public string Zanr { get; set; }
+        public int Narodnost { get; set; }
+        public int Zanr { get; set; }
         public bool Nazivu { get; set; }
         public int Vek { get; set; }
         public bool Aktivni { get; set; }
         public bool Zenaty { get; set; }
         public string Pohlavi { get; set; }
 
-        public Rapper(string prezdivka, string narodnost, string zanr, bool nazivu, int vek, bool aktivni, bool zenaty, string pohlavi)
+        public Rapper(int id, string prezdivka, int narodnost, int zanr, bool nazivu, int vek, bool aktivni, bool zenaty, string pohlavi)
         {
+            ID = id;
             Prezdivka = prezdivka;
             Narodnost = narodnost;
             Zanr = zanr; 

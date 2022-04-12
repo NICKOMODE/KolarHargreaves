@@ -55,6 +55,8 @@
             this.cb_AktivniNe = new System.Windows.Forms.CheckBox();
             this.tb_pohlavi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_ulozit = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.numVek)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +66,7 @@
             this.lbVypis.FormattingEnabled = true;
             this.lbVypis.Location = new System.Drawing.Point(12, 12);
             this.lbVypis.Name = "lbVypis";
-            this.lbVypis.Size = new System.Drawing.Size(215, 420);
+            this.lbVypis.Size = new System.Drawing.Size(215, 446);
             this.lbVypis.TabIndex = 0;
             this.lbVypis.SelectedIndexChanged += new System.EventHandler(this.lbVypis_SelectedIndexChanged);
             // 
@@ -105,7 +107,8 @@
             this.cbNarodnost.Items.AddRange(new object[] {
             "CZ",
             "USA",
-            "UK"});
+            "UK",
+            "SK"});
             this.cbNarodnost.Location = new System.Drawing.Point(377, 36);
             this.cbNarodnost.Name = "cbNarodnost";
             this.cbNarodnost.Size = new System.Drawing.Size(202, 21);
@@ -116,8 +119,8 @@
             this.cbZanr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbZanr.FormattingEnabled = true;
             this.cbZanr.Items.AddRange(new object[] {
+            "Emo rap ",
             "Grime",
-            "Emo rap",
             "Hip Hop",
             "Drill"});
             this.cbZanr.Location = new System.Drawing.Point(378, 75);
@@ -221,6 +224,7 @@
             this.btEditovat.TabIndex = 23;
             this.btEditovat.Text = "Editovat";
             this.btEditovat.UseVisualStyleBackColor = true;
+            this.btEditovat.Click += new System.EventHandler(this.btEditovat_Click);
             // 
             // btPridat
             // 
@@ -233,7 +237,7 @@
             // 
             // btZrusit
             // 
-            this.btZrusit.Location = new System.Drawing.Point(11, 435);
+            this.btZrusit.Location = new System.Drawing.Point(11, 474);
             this.btZrusit.Name = "btZrusit";
             this.btZrusit.Size = new System.Drawing.Size(568, 23);
             this.btZrusit.TabIndex = 25;
@@ -275,7 +279,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(243, 9);
+            this.label8.Location = new System.Drawing.Point(294, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 18);
             this.label8.TabIndex = 32;
@@ -283,9 +287,9 @@
             // 
             // tbJmeno
             // 
-            this.tbJmeno.Location = new System.Drawing.Point(377, 10);
+            this.tbJmeno.Location = new System.Drawing.Point(428, 12);
             this.tbJmeno.Name = "tbJmeno";
-            this.tbJmeno.Size = new System.Drawing.Size(243, 20);
+            this.tbJmeno.Size = new System.Drawing.Size(152, 20);
             this.tbJmeno.TabIndex = 33;
             // 
             // rb_NazivuAno
@@ -337,11 +341,26 @@
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
+            // bt_ulozit
+            // 
+            this.bt_ulozit.Location = new System.Drawing.Point(297, 429);
+            this.bt_ulozit.Name = "bt_ulozit";
+            this.bt_ulozit.Size = new System.Drawing.Size(283, 23);
+            this.bt_ulozit.TabIndex = 39;
+            this.bt_ulozit.Text = "Uložit";
+            this.bt_ulozit.UseVisualStyleBackColor = true;
+            this.bt_ulozit.Click += new System.EventHandler(this.bt_ulozit_Click);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "CSV|.csv";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 470);
+            this.ClientSize = new System.Drawing.Size(815, 509);
+            this.Controls.Add(this.bt_ulozit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tb_pohlavi);
             this.Controls.Add(this.cb_AktivniNe);
@@ -407,6 +426,8 @@
         private System.Windows.Forms.CheckBox cb_AktivniNe;
         private System.Windows.Forms.TextBox tb_pohlavi;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button bt_ulozit;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
